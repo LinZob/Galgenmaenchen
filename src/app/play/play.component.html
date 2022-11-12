@@ -1,0 +1,11 @@
+
+<div>
+    <!--die Sub Komponente bekommt ein bearbeitetes Wort und eine Zählung-->
+    <app-screen [vCount]="vCount" [vWort]="vSendToScreen" ></app-screen>
+    <!--die Sub Komponente bekommt ein Wort und liefert eine Anfrage-->
+    <app-keyboard [vNext]="vWort" (dummy)="import($event)" ></app-keyboard>
+</div>
+
+<div class="middle">
+    <button type="submit" class="xlButton" (click)="clickButton()">neues Wort</button> 
+</div>

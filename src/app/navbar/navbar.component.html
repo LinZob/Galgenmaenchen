@@ -1,0 +1,40 @@
+
+<nav class="navbar navbar-absolute fixed-top navbar-inverse">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Hang Man</a> 
+      <p style="color: rgb(218, 172, 55)"><b>{{vAnswer}}</b></p>
+    </div>
+<!-- Sichtbar für angemeldete Spieler-->
+    <ul class="nav navbar-nav" *ngIf="this.vAdminStat[0]==1">
+      <li><a [routerLink]="['play', vStatus]"><button class="knopfBreit" >Play</button></a></li>
+      <li><a href="#"><button class="knopfBreit" (click)="clear()" >Abmelden</button></a></li>
+    </ul>
+<!-- Sichtbar für angemeldete Administratoren--> 
+    <ul class="nav navbar-nav" *ngIf="this.vAdminStat[0]==0">
+      <li><a [routerLink]="['play', vStatus]"><button class="knopfBreit" >Play</button></a></li>
+      <li><a href="#"><button class="knopfBreit" (click)="clear()" >Abmelden</button></a></li>
+      <li><a><button class="knopfBreit"  (click)="nextWord()" >Wortschatz</button></a></li>
+    </ul>
+<!-- Sichtbar vor Anmeldung-->   
+    <ul class="nav navbar-nav" *ngIf="this.vAdminStat[0]==-1">
+      <li class="col-sm-20"><input type="name" class="form-control" id="name" required [(ngModel)]="vName" placeholder="Enter name"></li><br>
+      <li class="col-sm-20"> <input type="password" class="form-control" id="pwd" required [(ngModel)]="vPwd" placeholder="Enter password"></li><br>
+      <li><button type="submit" class="knopfBreit" (click)="vergleich()" > Anmelden </button></li>
+    </ul>
+
+    <ul class="nav navbar-nav" *ngIf="this.vAdminStat[0]==-1">
+      <li><button type="submit" class="knopfBreit" (click)="dummy()" > neuer Spieler </button></li>
+    </ul>
+    <ul class="nav navbar-nav" style="color:rgb(218, 172, 55)">
+      <p >Im Entwicklungsmodus sind Spieler vorinstalliert:</p>
+      <li *ngFor="let item of items">{{item}}</li>
+      <p>die Passworte sind die anderen der Duos </p>
+    </ul>
+    <ul>
+      
+    </ul>
+
+  </div>
+</nav>

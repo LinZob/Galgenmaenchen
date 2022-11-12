@@ -1,0 +1,7 @@
+
+<!--der Runde Button wird für alle Buchstaben einzeln regeneriert [class.roundButtonRed]="vTipp.includes('item')"-->
+<div class="middle">
+    <button type="submit" class="roundButton" [disabled]="vTipp.includes(item)" *ngFor="let item of items; let i = index"  (click)="addLetter(i)">{{item}}</button>
+
+</div>
+

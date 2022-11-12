@@ -1,0 +1,8 @@
+
+
+<div class="picture">
+    <img src='{{ valSrc }}' alt="hangman">
+</div>
+<div class="quest" *ngIf="vWort !='' ">  <!--Farbwechsel bei letztem Versuch-->
+    <p [class.lastChance]="vCount > 11">Wort: {{vWort | uppercase}} </p>
+</div>
