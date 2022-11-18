@@ -42,17 +42,21 @@ export class StatusService {
 
   }
 
-  public toNumber(arr : boolean[]){
+  public toNumber(arr: boolean[]){
     
-    let l : number = arr.length;
-    let j : number = 0;
-    let diff : number[] = [8,4,2,1];
+    let i,j : number = 0;
+    let diff : number[] = [];
 
-    if(l>4){
-      l=4;
+    for(i=0; i<arr.length;i++){
+      diff[i]=1;
+
+      for(j=0; j<i; j++){
+        diff[j] = diff[j]*2;
+      }
+ 
     }
     
-    for(j=0; j<l;j++){
+    for(j=0; j<arr.length;j++){
       if(arr[j]==true){
         this.n = this.n + diff[j];
       }

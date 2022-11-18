@@ -14,83 +14,103 @@ export class WordService {
   public wortschatz : Word[] = [
     {
       vWord : "Hammer",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 374,
+      vSolve : 284,
     },
     {
       vWord : "Truhe",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 587,
+      vSolve : 489,
     },
     {
       vWord : "Schlange",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 465,
+      vSolve : 395,
     },
     {
       vWord : "Knochen",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 482,
+      vSolve : 369,
     },
     {
       vWord : "Puppe",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 578,
+      vSolve : 125,
     },
     {
       vWord : "Schmutz",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 368,
+      vSolve : 251,
     },
     {
       vWord : "Schifffahrt",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 415,
+      vSolve : 365,
     },
     {
       vWord : "Alkoholkontrolle",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 325,
+      vSolve : 187,
     },
     {
       vWord : "Schmetterling",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 248,
+      vSolve : 82,
     },
     {
       vWord : "Sumpf",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 514,
+      vSolve : 482,
     },
     {
       vWord : "Hummel",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 315,
+      vSolve : 83,
     },
     {
       vWord : "Storch",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 414,
+      vSolve : 321,
     },
     {
       vWord : "Truhe",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 415,
+      vSolve : 135,
     },
     {
       vWord : "Pfifferling",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 512,
+      vSolve : 321,
     },
     {
       vWord : "Steckdose",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 314,
+      vSolve : 216,
     },
     {
       vWord : "Klavier",
-      vTry : 0,
-      vSolve : 0,
+      vTry : 185,
+      vSolve : 124,
+    },
+    {
+      vWord : "Rauch",
+      vTry : 185,
+      vSolve : 94,
+    },
+    {
+      vWord : "Knolle",
+      vTry : 412,
+      vSolve : 389,
+    },
+    {
+      vWord : "Schinken",
+      vTry : 348,
+      vSolve : 284,
+    },
+    {
+      vWord : "Kelle",
+      vTry : 485,
+      vSolve : 315,
     }
   ]
 
@@ -113,7 +133,7 @@ export class WordService {
 
   constructor() { }
 
-  /* liefert anhand einer Statusnummer ein Wort das der Spieler noch nicht gespielt hat zurück und eine neue Statusnummer */
+  /* liefert anhand einer Statusnummer eine Positionsnummer eines Wortes, das der Spieler noch nicht gespielt hat zurück und eine neue Statusnummer */
 
   public getTipp(stat: number){
 
